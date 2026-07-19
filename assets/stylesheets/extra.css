@@ -1,0 +1,779 @@
+/* ═══════════════════════════════════════════════
+   Stoneland Wiki — тёмное фэнтези
+   Палитра: глубокий синий + сине-серый + слоновая кость
+   ═══════════════════════════════════════════════ */
+
+/* ─── Тёмная тема (основная) ─── */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0d1820;
+  --md-default-bg-color--light: #15212e;
+  --md-default-bg-color--lighter: #1a2638;
+  --md-default-bg-color--lightest: #233146;
+
+  --md-default-fg-color: #e8dcc8;
+  --md-default-fg-color--light: #c4b8a3;
+  --md-default-fg-color--lighter: #8a9bb0;
+  --md-default-fg-color--lightest: #2a3a52;
+
+  --md-primary-fg-color: #0d1820;
+  --md-primary-fg-color--light: #1a2638;
+  --md-primary-fg-color--dark: #08111a;
+  --md-primary-bg-color: #f0e8d8;
+  --md-primary-bg-color--light: #c4b8a3;
+
+  --md-accent-fg-color: #8aa8c8;
+  --md-accent-fg-color--transparent: rgba(138, 168, 200, 0.1);
+  --md-accent-bg-color: #f0e8d8;
+
+  --md-typeset-color: #e8dcc8;
+  --md-typeset-a-color: #8aa8c8;
+
+  --md-code-bg-color: #15212e;
+  --md-code-fg-color: #e8dcc8;
+}
+
+/* ─── Светлая тема (пергамент с холодными акцентами) ─── */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #f5f1e8;
+  --md-default-bg-color--light: #ede8db;
+  --md-default-bg-color--lighter: #e4dccb;
+  --md-default-bg-color--lightest: #d5cbb5;
+
+  --md-default-fg-color: #1a2638;
+  --md-default-fg-color--light: #2a3a52;
+  --md-default-fg-color--lighter: #4a5870;
+  --md-default-fg-color--lightest: #d5cbb5;
+
+  --md-primary-fg-color: #1a2638;
+  --md-primary-fg-color--light: #2a3a52;
+  --md-primary-fg-color--dark: #0d1820;
+  --md-primary-bg-color: #f5f1e8;
+
+  --md-accent-fg-color: #3a5878;
+  --md-accent-fg-color--transparent: rgba(58, 88, 120, 0.1);
+
+  --md-typeset-color: #1a2638;
+  --md-typeset-a-color: #3a5878;
+
+  --md-code-bg-color: #ede8db;
+}
+
+/* ─── Контент шире и с большим воздухом ─── */
+.md-grid {
+  max-width: 1600px;
+}
+
+/* ─── Текстовая колонка — ограничиваем ширину строки для читаемости.
+   Важно: ограничение теперь на __inner, а не на .md-content — это
+   позволяет баннеру (который лежит рядом, вне __inner) тянуться на
+   всю ширину колонки контента, вплоть до боковых панелей. ─── */
+.md-content__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ─── Разносим боковые панели к краям экрана на широких мониторах ───
+   (на мобиле/планшете это не трогаем — там сайдбар всё равно
+   выезжает поверх контента, и его исходная ширина там важна) */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar {
+    width: 15.5rem;
+  }
+}
+
+/* ─── Типографика ─── */
+.md-typeset {
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  font-size: 1.55rem;
+  margin-top: 2.5rem;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.5rem;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-top: 2rem;
+}
+
+/* ─── Шапка ─── */
+.md-header {
+  box-shadow: 0 1px 0 var(--md-default-fg-color--lightest);
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-header__title {
+  font-weight: 700;
+}
+
+/* Логотип крупнее обычного */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+/* ═══════════════════════════════════════════════
+   Сайдбар — крупные "вкладки" категорий
+   (в духе списка документов Google Docs / каналов Discord)
+   ═══════════════════════════════════════════════ */
+.md-sidebar {
+  padding-top: 1rem;
+}
+
+.md-nav__title {
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--md-default-fg-color--lighter);
+  padding: 0.4rem 0.75rem;
+}
+
+/* Общие правила для всех пунктов навигации: крупнее, с воздухом,
+   с закруглением — как неймплейт в личных сообщениях Discord */
+.md-nav--primary .md-nav__item,
+.md-nav .md-nav__item {
+  margin: 0.15rem 0;
+}
+
+.md-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  margin: 0.1rem 0;
+  font-size: 0.85rem;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Верхний уровень — категории — крупнее и жирнее, как вкладки-документы */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-size: 0.98rem;
+  font-weight: 700;
+  padding: 0.75rem 0.85rem;
+  border-radius: 12px;
+}
+
+/* Вложенные страницы внутри раскрытой категории — чуть компактнее */
+.md-nav__item .md-nav__item > .md-nav__link {
+  font-size: 0.83rem;
+  font-weight: 500;
+  padding: 0.55rem 0.85rem 0.55rem 1.15rem;
+}
+
+/* Подсветка при наведении — мягкая, закруглённая, как в Discord */
+.md-nav__link:hover,
+.md-nav__link:focus {
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+/* Активная / выбранная страница — устойчивая закруглённая подсветка */
+.md-nav__link--active,
+.md-nav__item .md-nav__link[aria-current="page"] {
+  background-color: var(--md-accent-fg-color--transparent);
+  font-weight: 700;
+}
+
+.md-nav__link--active,
+.md-nav__link[aria-current="page"] {
+  color: var(--md-accent-fg-color) !important;
+}
+
+/* Стрелка раскрытия категории — выравниваем по правому краю */
+.md-nav__icon {
+  margin-left: auto;
+}
+
+/* Небольшой отступ у самого верхнего списка сайдбара */
+.md-nav--primary > .md-nav__list {
+  padding: 0 0.4rem;
+}
+
+/* ─── Admonition блоки — мягкие тёмные карточки ─── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 12px;
+  border-left-width: 4px;
+  box-shadow: none;
+  font-size: 0.8rem;
+  background-color: var(--md-default-bg-color--light);
+}
+
+/* ─── Кнопки — заметное закругление ─── */
+.md-typeset .md-button {
+  border-radius: 10px;
+}
+
+/* ─── Код ─── */
+.md-typeset pre > code,
+.md-typeset code {
+  border-radius: 8px;
+}
+
+/* ─── Таблицы ─── */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.78rem;
+  background-color: var(--md-default-bg-color--light);
+}
+
+.md-typeset table:not([class]) th {
+  font-weight: 600;
+  background-color: var(--md-default-bg-color--lighter);
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* ─── Ссылки без подчёркивания ─── */
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md-typeset a:hover {
+  border-bottom-color: currentColor;
+}
+
+/* ═══════════════════════════════════════════════
+   Баннер страницы (задаётся через `banner:` в front matter
+   md-файла) — лежит СНАРУЖИ текстовой колонки (см. overrides/main.html),
+   поэтому занимает всю ширину между сайдбарами, вплотную к их краям
+   ═══════════════════════════════════════════════ */
+.page-banner {
+  position: relative;
+  width: 100%;
+  height: clamp(200px, 26vw, 380px);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.page-banner__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* картинка растягивается на всю высоту блока, а маска "срезает"
+     низ прозрачностью — так фон сайта проступает плавным градиентом,
+     без жёсткой границы и без привязки к цвету темы (работает и
+     в светлой, и в тёмной) */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 45%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 45%, transparent 100%);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    height: clamp(140px, 40vw, 240px);
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   Hero-баннер на главной
+   ═══════════════════════════════════════════════ */
+
+.hero {
+  position: relative;
+  margin: -1.5rem -2rem 3rem;
+  padding: 6rem 2rem;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(13, 24, 32, 0.4) 0%,
+      rgba(13, 24, 32, 0.7) 60%,
+      rgba(13, 24, 32, 0.95) 100%
+    ),
+    url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  text-align: center;
+  overflow: hidden;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 0%,
+      rgba(13, 24, 32, 0.3) 100%
+    );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  color: #f0e8d8 !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: -0.02em;
+  text-shadow:
+    2px 2px 0 rgba(13, 24, 32, 0.8),
+    0 0 20px rgba(13, 24, 32, 0.6);
+}
+
+.hero-tagline {
+  font-size: 1.15rem;
+  color: #c4b8a3;
+  margin-bottom: 2rem;
+  font-style: italic;
+  text-shadow: 1px 1px 0 rgba(13, 24, 32, 0.6);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .md-button {
+  background-color: #8aa8c8;
+  color: #0d1820 !important;
+  border: none;
+  font-weight: 600;
+  padding: 0.7rem 1.8rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-buttons .md-button:hover {
+  background-color: #f0e8d8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.hero-buttons .md-button--secondary {
+  background-color: transparent;
+  color: #f0e8d8 !important;
+  border: 2px solid #f0e8d8;
+}
+
+.hero-buttons .md-button--secondary:hover {
+  background-color: rgba(240, 232, 216, 0.1);
+}
+
+/* На мобиле hero поменьше */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1.5rem;
+    margin: -1rem -1rem 2rem;
+  }
+  .hero h1 {
+    font-size: 2rem !important;
+  }
+  .hero-tagline {
+    font-size: 1rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   Карточки разделов на главной
+   ═══════════════════════════════════════════════ */
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+  background-color: var(--md-default-bg-color--light);
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  border-color: var(--md-accent-fg-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.md-typeset .grid.cards .twemoji {
+  color: var(--md-accent-fg-color);
+}
+
+/* ─── Пиксель-арт картинки — без сглаживания ─── */
+.md-typeset img {
+  border-radius: 8px;
+}
+
+.md-typeset img.pixelated,
+.hero {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* ═══════════════════════════════════════════════
+   ЛЕНДИНГ-СЕКЦИИ
+   ═══════════════════════════════════════════════ */
+
+/* Полноэкранный hero — переопределяет существующий .hero */
+.hero.hero-fullscreen {
+  min-height: 80vh;
+  margin: -1.5rem -2rem 0;
+  padding: 8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+}
+
+.hero.hero-fullscreen .hero-content {
+  max-width: 800px;
+}
+
+.hero.hero-fullscreen h1 {
+  font-size: 4.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.hero.hero-fullscreen .hero-tagline {
+  font-size: 1.35rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero.hero-fullscreen {
+    min-height: 70vh;
+    padding: 4rem 1rem;
+  }
+  .hero.hero-fullscreen h1 {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* IP сервера */
+.hero-ip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.8rem 0.6rem 1.2rem;
+  background-color: rgba(13, 24, 32, 0.7);
+  border: 1px solid rgba(138, 168, 200, 0.4);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  margin-bottom: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-ip-label {
+  color: #c4b8a3;
+  font-size: 0.85rem;
+}
+
+.hero-ip-value {
+  color: #f0e8d8;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.hero-ip-copy {
+  background-color: #8aa8c8;
+  color: #0d1820;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+}
+
+.hero-ip-copy:hover {
+  background-color: #f0e8d8;
+  transform: translateY(-1px);
+}
+
+.hero-ip-copy.copied {
+  background-color: #6fb088;
+  color: white;
+}
+
+/* Общий контейнер секции */
+.landing-section {
+  margin: 4rem -2rem;
+  padding: 4rem 2rem;
+}
+
+.landing-section--dark {
+  background-color: var(--md-default-bg-color--light);
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.landing-section > .md-typeset > h2,
+.landing-section h2 {
+  text-align: center;
+  font-size: 2rem !important;
+  border: none !important;
+  margin-bottom: 1rem;
+  padding-bottom: 0 !important;
+}
+
+.landing-section > .md-typeset > h2 + p,
+.landing-section h2 + p {
+  text-align: center;
+  color: var(--md-default-fg-color--light);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-size: 1rem;
+}
+
+/* Карточки в landing-секциях — в три колонки на десктопе */
+.landing-cards.grid.cards > ul,
+.landing-cards.grid.cards > ol {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* ═══════════════════════════════════════════════
+   КАРУСЕЛЬ СКРИНШОТОВ
+   ═══════════════════════════════════════════════ */
+.screenshot-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0 2rem;
+  margin: 0 -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-accent-fg-color) transparent;
+}
+
+.screenshot-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.screenshot-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.screenshot-carousel::-webkit-scrollbar-thumb {
+  background: var(--md-accent-fg-color);
+  border-radius: 3px;
+}
+
+.screenshot-carousel img {
+  flex: 0 0 auto;
+  width: 75%;
+  max-width: 700px;
+  scroll-snap-align: center;
+  border-radius: 12px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.screenshot-carousel img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .screenshot-carousel img {
+    width: 92%;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   СОЦСЕТИ
+   ═══════════════════════════════════════════════ */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--md-default-bg-color--light);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--md-default-fg-color) !important;
+}
+
+.social-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 10px;
+  background-color: rgba(138, 168, 200, 0.15);
+  flex-shrink: 0;
+}
+
+.social-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.social-card--discord .social-icon { background-color: rgba(88, 101, 242, 0.2); }
+.social-card--youtube .social-icon { background-color: rgba(255, 76, 76, 0.2); }
+.social-card--telegram .social-icon { background-color: rgba(38, 165, 228, 0.2); }
+
+.social-title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.social-subtitle {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ═══════════════════════════════════════════════
+   ФИНАЛЬНЫЙ CTA
+   ═══════════════════════════════════════════════ */
+.landing-cta {
+  text-align: center;
+  margin: 4rem -2rem 0;
+  padding: 5rem 2rem;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(13, 24, 32, 0.85) 0%,
+      rgba(13, 24, 32, 0.95) 100%
+    ),
+    url('../images/banner-forest-fireflies.jpg');
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.landing-cta h2 {
+  font-size: 2.5rem !important;
+  color: #f0e8d8 !important;
+  border: none !important;
+  margin-bottom: 1rem;
+  padding-bottom: 0 !important;
+  text-shadow: 2px 2px 0 rgba(13, 24, 32, 0.6);
+}
+
+.landing-cta-tagline {
+  color: #c4b8a3;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-style: italic;
+}
+
+.landing-cta .hero-ip {
+  margin-bottom: 2rem;
+}
+
+/* ═══════════════════════════════════════════════
+   Кнопка primary — медь под брэнд
+   ═══════════════════════════════════════════════ */
+.md-button.md-button--primary {
+  background-color: #8aa8c8;
+  color: #0d1820 !important;
+  border-color: #8aa8c8;
+}
+
+.md-button.md-button--primary:hover {
+  background-color: #f0e8d8;
+  border-color: #f0e8d8;
+  color: #0d1820 !important;
+}
+
+/* ═══════════════════════════════════════════════
+   Плавное появление контента при переходе между
+   страницами (баннер и текст "всплывают" снизу).
+   Так как инстант-навигация каждый раз вставляет
+   новый DOM-узел статьи — анимация сама переигрывается
+   при каждом переходе, JS для этого не нужен.
+   ═══════════════════════════════════════════════ */
+@keyframes stoneland-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fx-fade-up {
+  animation: stoneland-fade-up 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.fx-fade-up--delay {
+  animation-delay: 0.06s;
+}
+
+/* Уважаем настройку "уменьшить анимацию" в ОС/браузере */
+@media (prefers-reduced-motion: reduce) {
+  .fx-fade-up,
+  .fx-fade-up--delay {
+    animation: none;
+  }
+}
