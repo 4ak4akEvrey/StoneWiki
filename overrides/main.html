@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block container %}
+  <div class="md-content" data-md-component="content">
+    {% if "navigation.path" in features %}
+      {% include "partials/path.html" %}
+    {% endif %}
+    {% if page.meta and page.meta.banner %}
+      <div class="page-banner fx-fade-up">
+        <img src="{{ page.meta.banner | url }}" alt="" class="page-banner__img">
+      </div>
+    {% endif %}
+    <article class="md-content__inner md-typeset fx-fade-up fx-fade-up--delay">
+      {% block content %}
+        {% include "partials/content.html" %}
+      {% endblock %}
+    </article>
+  </div>
+{% endblock %}
