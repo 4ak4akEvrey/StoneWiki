@@ -1,0 +1,88 @@
+site_name: Stoneland Wiki
+site_description: Вики Stoneland
+site_url: https://4ak4akEvrey.github.io/StoneWiki
+
+repo_url: https://github.com/4ak4akEvrey/StoneWiki
+repo_name: 4ak4akEvrey/StoneWiki
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: ru
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+  font:
+    text: Manrope
+    code: JetBrains Mono
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+extra:
+  generator: false
+
+nav:
+  - 🏠 Главная: index.md
+  - 🌱 Начало игры:
+    - Первые шаги: start/start.md
+  - ⚔️ Расы:
+    - Обзор: main/races/index.md
+    - Люди: main/races/human.md
+    - Гномы: main/races/dwarf.md
+    - Эльфы: main/races/elf.md
+    - Каджиты: main/races/khajiit.md
+    - Монгреллы: main/races/mongrel.md
+    - Огры: main/races/ogre.md
+    - Тифлинги: main/races/tiefling.md
+  - 🏰 Города:
+    - Основы: main/town/index.md
+    - Система построек: main/town/systems.md
+    - Экономика: main/town/innovations.md
+    - Наделы: main/town/advisors.md
+    - Договоры: main/town/contracts.md
+  - 🎭 Ролевая игра: main/roleplay.md
+  - 🌡️ Температура: main/temperature.md
+  - 🎵 Музыка: main/music.md
+
+markdown_extensions:
+  - meta
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/transitions.js
