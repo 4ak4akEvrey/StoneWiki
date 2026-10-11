@@ -33,7 +33,6 @@ theme:
     - navigation.tracking
     - navigation.top
     - navigation.tabs
-    - navigation.sections
     - navigation.indexes
     - toc.follow
     - search.suggest
@@ -127,7 +126,7 @@ hooks:
   - hooks/stoneland.py
 
 extra_css:
-  - assets/stylesheets/extra.css?v=4
+  - assets/stylesheets/extra.css?v=5
 
 extra_javascript:
-  - assets/javascripts/transitions.js?v=4
+  - assets/javascripts/transitions.js?v=5

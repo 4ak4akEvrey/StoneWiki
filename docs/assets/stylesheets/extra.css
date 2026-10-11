@@ -537,54 +537,59 @@
     padding-right: 0.6rem;
   }
 
-  .md-nav__item--section > .md-nav__container > .md-nav__link {
-    margin: 0;
-    padding: 0;
-    background: none;
+  /* Группы вкладки (Основное, Расы, Города…) — подпись капсом со стрелкой,
+     раскрываются и сворачиваются */
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested {
+    margin-top: 0.9rem;
   }
 
-  .md-nav__item--section > .md-nav__container > label.md-nav__link {
-    display: none;
-  }
-
-  .md-nav__item--section > .md-nav__container > .md-nav__link--active {
-    color: var(--md-accent-fg-color);
-  }
-
-  /* Группы (Основное, Расы, Города…) — подпись капсом, как в образце */
-  .md-nav__item--section {
-    margin-top: 1.4rem;
-  }
-
-  .md-nav__item--section:first-child {
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested:first-child {
     margin-top: 0;
   }
 
-  .md-nav__item--section > .md-nav__link {
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested > .md-nav__link {
     font-size: 0.68rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--sl-strong);
+    padding: 0.4rem 0.75rem;
+    cursor: pointer;
+  }
+
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested > .md-nav__container {
+    padding: 0;
+  }
+
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested > .md-nav__container > .md-nav__link {
+    margin: 0;
+    padding: 0.4rem 0.75rem;
     background: none;
-    pointer-events: none;
-    padding-bottom: 0.25rem;
+    color: inherit;
   }
 
-  .md-nav__item--section > .md-nav__link a {
-    pointer-events: auto;
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested > .md-nav__container > label.md-nav__link {
+    padding-left: 0.3rem;
   }
 
-  .md-nav__item--section > .md-nav__link:hover {
-    background: none;
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested > .md-nav__container > .md-nav__link--active {
+    color: var(--md-accent-fg-color);
   }
 
-  .md-nav__item--section > .md-nav {
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested > .md-nav__link .md-nav__icon {
+    color: var(--sl-muted);
+  }
+
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested > .md-nav {
     margin-left: 0;
   }
 
-  /* Вложенные раскрывающиеся пункты — с отступом и линией */
-  .md-nav__item--nested:not(.md-nav__item--section) > .md-nav > .md-nav__list {
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested > .md-nav > .md-nav__list {
+    padding-top: 0.15rem;
+  }
+
+  /* Вложенные группы глубже — с отступом и линией */
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested .md-nav__item--nested > .md-nav > .md-nav__list {
     margin-left: 0.9rem;
     padding-left: 0.4rem;
     border-left: 1px solid var(--sl-border);
