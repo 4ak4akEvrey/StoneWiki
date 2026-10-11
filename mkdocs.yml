@@ -2,8 +2,6 @@ site_name: Stoneland Wiki
 site_description: Вики Stoneland
 site_url: https://4ak4akevrey.github.io/StoneWiki/
 
-repo_url: https://github.com/4ak4akEvrey/StoneWiki
-repo_name: 4ak4akEvrey/StoneWiki
 
 theme:
   name: material
