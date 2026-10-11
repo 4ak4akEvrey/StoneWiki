@@ -2,15 +2,30 @@
 
 {% block container %}
   <div class="md-content" data-md-component="content">
-    {% if "navigation.path" in features %}
-      {% include "partials/path.html" %}
-    {% endif %}
     {% if page.meta and page.meta.banner %}
       <div class="page-banner fx-fade-up">
         <img src="{{ page.meta.banner | url }}" alt="" class="page-banner__img">
       </div>
     {% endif %}
     <article class="md-content__inner md-typeset fx-fade-up fx-fade-up--delay">
+      {% set crumbs = page.ancestors | reverse | list %}
+      {% if page.is_index and crumbs %}
+        {% set crumbs = crumbs[:-1] %}
+      {% endif %}
+      {% if crumbs | length > 1 %}
+        {% set crumbs = crumbs[1:] %}
+      {% endif %}
+      <div class="sl-page-top">
+        <nav class="sl-crumbs" aria-label="Раздел">
+          {% for c in crumbs %}
+            <span class="sl-crumbs__item">{{ c.title }}</span>
+          {% endfor %}
+        </nav>
+        <button class="sl-copy" type="button" data-sl-copy title="Копировать ссылку на страницу">
+          {% include ".icons/material/link-variant.svg" %}
+          <span>Копировать ссылку</span>
+        </button>
+      </div>
       {% block content %}
         {% include "partials/content.html" %}
       {% endblock %}

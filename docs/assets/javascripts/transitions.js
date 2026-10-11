@@ -136,3 +136,35 @@ document.addEventListener("keydown", function (e) {
   }
   setTimeout(function () { input.focus(); }, 0);
 });
+
+// ── Кнопка «Копировать ссылку» и всплывашка ──
+document.addEventListener("click", function (e) {
+  var btn = e.target.closest && e.target.closest("[data-sl-copy]");
+  if (!btn) {
+    return;
+  }
+  var url = location.href.split("#")[0];
+  var done = function () {
+    var t = document.querySelector(".sl-toast");
+    if (!t) {
+      t = document.createElement("div");
+      t.className = "sl-toast";
+      document.body.appendChild(t);
+    }
+    t.textContent = "Ссылка скопирована";
+    t.classList.add("sl-toast--show");
+    clearTimeout(t._h);
+    t._h = setTimeout(function () { t.classList.remove("sl-toast--show"); }, 1600);
+  };
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(done);
+  } else {
+    var a = document.createElement("textarea");
+    a.value = url;
+    document.body.appendChild(a);
+    a.select();
+    document.execCommand("copy");
+    a.remove();
+    done();
+  }
+});

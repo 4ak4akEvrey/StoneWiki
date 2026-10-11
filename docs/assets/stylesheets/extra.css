@@ -1,142 +1,178 @@
 /* ═══════════════════════════════════════════════
-   Stoneland Wiki — тёмное фэнтези, раскладка в духе GitBook
-   Спокойная палитра, лёгкое меню, узкая колонка текста
+   Stoneland Wiki — раскладка в духе GitBook
+   Графитовая палитра, вкладки в шапке, капсулы в меню
    ═══════════════════════════════════════════════ */
 
 /* ─── Тёмная тема (основная) ─── */
 [data-md-color-scheme="slate"] {
-  --sl-border: #222c38;
-  --sl-surface: #141b23;
-  --sl-muted: #8b97a5;
+  --sl-border: #2a2d33;
+  --sl-surface: #1c1e22;
+  --sl-pill: #26292e;
+  --sl-pill-hover: #212327;
+  --sl-muted: #9a9fa7;
+  --sl-strong: #f2f2f0;
 
-  --md-default-bg-color: #0f151c;
-  --md-default-bg-color--light: #141b23;
-  --md-default-bg-color--lighter: #1a232d;
-  --md-default-bg-color--lightest: #222c38;
+  --md-default-bg-color: #141518;
+  --md-default-bg-color--light: #1c1e22;
+  --md-default-bg-color--lighter: #212327;
+  --md-default-bg-color--lightest: #2a2d33;
 
-  --md-default-fg-color: #e7e2d8;
-  --md-default-fg-color--light: #b9b3a8;
-  --md-default-fg-color--lighter: #8b97a5;
-  --md-default-fg-color--lightest: #222c38;
+  --md-default-fg-color: #ececea;
+  --md-default-fg-color--light: #c9c9c6;
+  --md-default-fg-color--lighter: #9a9fa7;
+  --md-default-fg-color--lightest: #2a2d33;
 
-  --md-primary-fg-color: #0f151c;
-  --md-primary-fg-color--light: #141b23;
-  --md-primary-fg-color--dark: #0b1016;
-  --md-primary-bg-color: #e7e2d8;
-  --md-primary-bg-color--light: #b9b3a8;
+  --md-primary-fg-color: #141518;
+  --md-primary-fg-color--light: #1c1e22;
+  --md-primary-fg-color--dark: #0f1012;
+  --md-primary-bg-color: #ececea;
+  --md-primary-bg-color--light: #c9c9c6;
 
   --md-accent-fg-color: #8fb3d9;
   --md-accent-fg-color--transparent: rgba(143, 179, 217, 0.12);
-  --md-accent-bg-color: #0f151c;
+  --md-accent-bg-color: #141518;
 
-  --md-typeset-color: #d9d4ca;
-  --md-typeset-a-color: #8fb3d9;
+  --md-typeset-color: #dcdcd8;
+  --md-typeset-a-color: #f2f2f0;
 
-  --md-code-bg-color: #141b23;
-  --md-code-fg-color: #e7e2d8;
+  --md-code-bg-color: #1c1e22;
+  --md-code-fg-color: #ececea;
 
-  --md-footer-bg-color: #0f151c;
-  --md-footer-bg-color--dark: #0b1016;
+  --md-footer-bg-color: #141518;
+  --md-footer-bg-color--dark: #0f1012;
 }
 
-/* ─── Светлая тема — чистый белый, как у GitBook ─── */
+/* ─── Светлая тема ─── */
 [data-md-color-scheme="default"] {
-  --sl-border: #e6e3dc;
-  --sl-surface: #f7f6f3;
-  --sl-muted: #6b7482;
+  --sl-border: #e6e4df;
+  --sl-surface: #f6f5f2;
+  --sl-pill: #ecebe7;
+  --sl-pill-hover: #f3f2ef;
+  --sl-muted: #6b7079;
+  --sl-strong: #16181c;
 
   --md-default-bg-color: #ffffff;
-  --md-default-bg-color--light: #f7f6f3;
-  --md-default-bg-color--lighter: #efede8;
-  --md-default-bg-color--lightest: #e6e3dc;
+  --md-default-bg-color--light: #f6f5f2;
+  --md-default-bg-color--lighter: #f3f2ef;
+  --md-default-bg-color--lightest: #e6e4df;
 
-  --md-default-fg-color: #1d2430;
-  --md-default-fg-color--light: #3d4654;
-  --md-default-fg-color--lighter: #6b7482;
-  --md-default-fg-color--lightest: #e6e3dc;
+  --md-default-fg-color: #1d2026;
+  --md-default-fg-color--light: #3c4048;
+  --md-default-fg-color--lighter: #6b7079;
+  --md-default-fg-color--lightest: #e6e4df;
 
   --md-primary-fg-color: #ffffff;
-  --md-primary-fg-color--light: #f7f6f3;
-  --md-primary-fg-color--dark: #efede8;
-  --md-primary-bg-color: #1d2430;
-  --md-primary-bg-color--light: #6b7482;
+  --md-primary-fg-color--light: #f6f5f2;
+  --md-primary-fg-color--dark: #ecebe7;
+  --md-primary-bg-color: #1d2026;
+  --md-primary-bg-color--light: #6b7079;
 
   --md-accent-fg-color: #2f5f8f;
   --md-accent-fg-color--transparent: rgba(47, 95, 143, 0.08);
   --md-accent-bg-color: #ffffff;
 
-  --md-typeset-color: #2a3240;
-  --md-typeset-a-color: #2f5f8f;
+  --md-typeset-color: #2b2f36;
+  --md-typeset-a-color: #16181c;
 
   --md-code-bg-color: #f4f3ef;
-  --md-code-fg-color: #1d2430;
+  --md-code-fg-color: #1d2026;
 
   --md-footer-bg-color: #ffffff;
-  --md-footer-bg-color--dark: #f7f6f3;
+  --md-footer-bg-color--dark: #f6f5f2;
 }
 
 ::selection {
   background-color: var(--md-accent-fg-color--transparent);
 }
 
-/* ─── Сетка: меню слева, текст по центру, оглавление справа ─── */
+/* ─── Сетка ─── */
 .md-grid {
-  max-width: 1440px;
+  max-width: 1480px;
 }
 
-/* Ширина строки ограничена на __inner, а не на .md-content —
-   баннер лежит снаружи и тянется на всю колонку */
+.md-main__inner {
+  margin-top: 0;
+}
+
+/* Ширина строки ограничена на __inner — баннер снаружи тянется на всю колонку */
 .md-content__inner {
-  max-width: 760px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 0 2rem 2rem;
 }
 
 .md-content__inner::before {
-  height: 1.2rem;
+  height: 1.6rem;
 }
 
 @media screen and (min-width: 76.25em) {
   .md-sidebar {
-    width: 15rem;
+    width: 17rem;
   }
 }
 
 /* ─── Типографика ─── */
 .md-typeset {
-  font-size: 0.8rem;
+  font-size: 0.84rem;
   line-height: 1.75;
   color: var(--md-typeset-color);
 }
 
 .md-typeset h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  margin: 0 0 1.2rem;
-  color: var(--md-default-fg-color);
+  margin: 0 0 0.9rem;
+  color: var(--sl-strong);
+}
+
+.md-typeset h1 .headerlink {
+  display: none;
+}
+
+.sl-emoji {
+  flex: none;
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+/* Подзаголовок под H1 и линия, как у GitBook */
+.md-typeset .sl-desc {
+  margin: -0.2rem 0 2rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--sl-border);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--sl-muted);
 }
 
 .md-typeset h2 {
   font-weight: 650;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.3;
   letter-spacing: -0.01em;
-  margin: 2.4rem 0 0.8rem;
-  color: var(--md-default-fg-color);
+  margin: 2.6rem 0 0.9rem;
+  color: var(--sl-strong);
 }
 
 .md-typeset h3 {
   font-weight: 600;
-  font-size: 0.95rem;
-  margin: 1.8rem 0 0.6rem;
-  color: var(--md-default-fg-color);
+  font-size: 1rem;
+  margin: 1.9rem 0 0.6rem;
+  color: var(--sl-strong);
 }
 
 .md-typeset h4 {
   font-weight: 600;
-  color: var(--md-default-fg-color);
+  color: var(--sl-strong);
+}
+
+.md-typeset strong {
+  color: var(--sl-strong);
 }
 
 .md-typeset hr {
@@ -145,32 +181,131 @@
 }
 
 .md-typeset blockquote {
-  border-left: 3px solid var(--sl-border);
+  border-left: 2px solid var(--sl-border);
   color: var(--md-default-fg-color--light);
-  padding-left: 1rem;
+  padding-left: 1.2rem;
+  margin-left: 0;
 }
 
-/* Якорь-решётка у заголовков — тише */
+/* Решётка-якорь у заголовков — появляется при наведении */
 .md-typeset .headerlink {
   color: var(--sl-muted);
+  margin-left: 0.4rem;
 }
 
-/* ─── Ссылки — тонкое подчёркивание, как в GitBook ─── */
+.md-typeset .headerlink:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* ─── Ссылки — жирные с подчёркиванием, как в образце ─── */
 .md-typeset a:not([class]) {
   color: var(--md-typeset-a-color);
+  font-weight: 600;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  text-decoration-color: color-mix(in srgb, var(--md-typeset-a-color) 35%, transparent);
-  transition: text-decoration-color 0.2s;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+  transition: text-decoration-color 0.2s, color 0.2s;
 }
 
 .md-typeset a:not([class]):hover {
+  color: var(--md-accent-fg-color);
   text-decoration-color: currentColor;
 }
 
+.md-typeset img {
+  border-radius: 12px;
+}
+
 /* ═══════════════════════════════════════════════
-   Шапка — сливается с фоном, тонкая граница снизу
+   Верх страницы: «крошки» раздела + «Копировать ссылку»
+   ═══════════════════════════════════════════════ */
+.sl-page-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 1.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.sl-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--sl-muted);
+}
+
+.sl-crumbs__item + .sl-crumbs__item::before {
+  content: "›";
+  margin-right: 0.3rem;
+  opacity: 0.6;
+}
+
+.sl-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex: none;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--sl-border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  font: inherit;
+  font-size: 0.64rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.sl-copy:hover {
+  background-color: var(--sl-pill-hover);
+  border-color: var(--sl-muted);
+  color: var(--sl-strong);
+}
+
+.sl-copy svg {
+  width: 0.8rem;
+  height: 0.8rem;
+  fill: currentColor;
+}
+
+@media (max-width: 600px) {
+  .sl-copy span {
+    display: none;
+  }
+}
+
+.sl-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 10;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--sl-border);
+  border-radius: 10px;
+  background: var(--sl-surface);
+  color: var(--sl-strong);
+  font-size: 0.7rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translate(-50%, 0.6rem);
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+}
+
+.sl-toast--show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* ═══════════════════════════════════════════════
+   Шапка — логотип, вкладки-капсулы по центру, поиск
    ═══════════════════════════════════════════════ */
 .md-header {
   background-color: var(--md-default-bg-color);
@@ -182,6 +317,10 @@
   box-shadow: 0 1px 0 var(--sl-border);
 }
 
+.md-header__inner {
+  padding: 0.35rem 0.4rem;
+}
+
 .md-header__title {
   font-weight: 700;
   font-size: 0.85rem;
@@ -189,20 +328,76 @@
 
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 1.7rem;
-  width: 1.7rem;
-  border-radius: 6px;
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 7px;
 }
 
 .md-header__source {
   color: var(--sl-muted);
 }
 
+/* Стандартная полоса вкладок под шапкой не нужна — вкладки в шапке */
+.md-tabs {
+  display: none;
+}
+
+.sl-tabs {
+  display: none;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-header__title {
+    flex-grow: 0;
+    width: 11rem;
+  }
+
+  .sl-tabs {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .sl-tabs__list {
+    display: flex;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0.2rem;
+    list-style: none;
+  }
+
+  .sl-tabs .md-tabs__item {
+    height: auto;
+    padding: 0;
+  }
+
+  .sl-tabs .md-tabs__link {
+    display: block;
+    margin: 0;
+    padding: 0.38rem 1rem;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--sl-muted);
+    opacity: 1;
+    transition: background-color 0.15s, color 0.15s;
+  }
+
+  .sl-tabs .md-tabs__link:hover {
+    color: var(--sl-strong);
+    background-color: var(--sl-pill-hover);
+  }
+
+  .sl-tabs .md-tabs__item--active .md-tabs__link {
+    color: var(--sl-strong);
+    background-color: var(--sl-pill);
+  }
+}
+
 /* Поиск — строка с рамкой и подсказкой Ctrl K */
 @media screen and (min-width: 60em) {
   .md-search__form {
     height: 1.9rem;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: var(--sl-surface);
     box-shadow: inset 0 0 0 1px var(--sl-border);
     transition: box-shadow 0.2s, background-color 0.2s;
@@ -238,7 +433,7 @@
   }
 
   [data-md-toggle="search"]:checked ~ .md-header .md-search__form {
-    border-radius: 8px 8px 0 0;
+    border-radius: 10px 10px 0 0;
     background-color: var(--md-default-bg-color);
   }
 
@@ -247,15 +442,15 @@
   }
 
   .md-search__output {
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 10px 10px;
   }
 }
 
 /* ═══════════════════════════════════════════════
-   Левое меню — группы-подписи и лёгкие пункты
+   Левое меню — подписи групп и капсулы
    ═══════════════════════════════════════════════ */
 .md-sidebar {
-  padding-top: 1.2rem;
+  padding-top: 1.6rem;
 }
 
 .md-sidebar__scrollwrap {
@@ -264,15 +459,15 @@
 }
 
 .md-nav {
-  font-size: 0.74rem;
+  font-size: 0.78rem;
 }
 
 .md-nav__title {
-  font-weight: 600;
-  font-size: 0.62rem;
+  font-weight: 700;
+  font-size: 0.66rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--sl-muted);
+  color: var(--sl-strong);
   box-shadow: none;
   background: none;
 }
@@ -286,22 +481,22 @@
 }
 
 .md-nav--primary .md-nav__link {
-  margin: 0.08rem 0;
-  padding: 0.32rem 0.6rem;
-  border-radius: 6px;
+  margin: 0.1rem 0;
+  padding: 0.45rem 0.75rem;
+  border-radius: 10px;
   color: var(--md-default-fg-color--light);
   transition: background-color 0.15s, color 0.15s;
 }
 
 .md-nav--primary .md-nav__link:hover {
-  color: var(--md-default-fg-color);
-  background-color: var(--md-default-bg-color--lighter);
+  color: var(--sl-strong);
+  background-color: var(--sl-pill-hover);
 }
 
 .md-nav--primary .md-nav__link--active,
 .md-nav--primary .md-nav__link[aria-current="page"] {
-  color: var(--md-accent-fg-color);
-  background-color: var(--md-accent-fg-color--transparent);
+  color: var(--sl-strong);
+  background-color: var(--sl-pill);
   font-weight: 600;
 }
 
@@ -316,70 +511,118 @@
   }
 }
 
-/* Группы (Расы, Города…) — подпись, а не пункт */
 @media screen and (min-width: 76.25em) {
   .md-nav--primary > .md-nav__title {
     display: none;
   }
 
-  .md-nav--primary > .md-nav__list > .md-nav__item--section {
-    margin-top: 1.1rem;
+  /* Название вкладки над меню не нужно — оно уже в шапке */
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav__link,
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__title {
+    display: none;
   }
 
-  .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link {
-    font-size: 0.66rem;
-    font-weight: 700;
-    color: var(--md-default-fg-color);
+  /* Material держит меню шириной 11.5rem через отступ справа — растягиваем */
+  [dir] .md-sidebar--primary .md-sidebar__inner {
+    padding-right: 0.6rem;
+  }
+
+  .md-nav__item--section > .md-nav__container > .md-nav__link {
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+
+  .md-nav__item--section > .md-nav__container > label.md-nav__link {
+    display: none;
+  }
+
+  .md-nav__item--section > .md-nav__container > .md-nav__link--active {
+    color: var(--md-accent-fg-color);
+  }
+
+  /* Группы (Основное, Расы, Города…) — подпись капсом, как в образце */
+  .md-nav__item--section {
+    margin-top: 1.4rem;
+  }
+
+  .md-nav__item--section:first-child {
+    margin-top: 0;
+  }
+
+  .md-nav__item--section > .md-nav__link {
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--sl-strong);
     background: none;
     pointer-events: none;
-    padding-bottom: 0.15rem;
+    padding-bottom: 0.25rem;
   }
 
-  .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link a {
+  .md-nav__item--section > .md-nav__link a {
     pointer-events: auto;
   }
 
-  .md-nav--primary .md-nav__item--section > .md-nav {
+  .md-nav__item--section > .md-nav__link:hover {
+    background: none;
+  }
+
+  .md-nav__item--section > .md-nav {
     margin-left: 0;
   }
 
-  .md-nav--primary .md-nav__item--section > .md-nav > .md-nav__list {
-    margin-left: 0.6rem;
+  /* Вложенные раскрывающиеся пункты — с отступом и линией */
+  .md-nav__item--nested:not(.md-nav__item--section) > .md-nav > .md-nav__list {
+    margin-left: 0.9rem;
     padding-left: 0.4rem;
     border-left: 1px solid var(--sl-border);
   }
 }
 
-/* ─── Правое оглавление — линия слева, активный пункт подсвечен ─── */
+/* ─── Правое оглавление «На этой странице» ─── */
 .md-nav--secondary .md-nav__title {
-  padding-left: 0.8rem;
-}
-
-.md-nav--secondary > .md-nav__list {
-  border-left: 1px solid var(--sl-border);
+  padding-left: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--sl-strong);
 }
 
 .md-nav--secondary .md-nav__link {
-  margin: 0;
-  padding: 0.22rem 0 0.22rem 0.8rem;
-  margin-left: -1px;
-  border-left: 1px solid transparent;
+  position: relative;
+  margin: 0.1rem 0;
+  padding: 0.38rem 0.7rem;
+  border-radius: 8px;
   color: var(--sl-muted);
-  font-size: 0.7rem;
-  transition: color 0.15s, border-color 0.15s;
+  font-size: 0.72rem;
+  transition: color 0.15s, background-color 0.15s;
 }
 
 .md-nav--secondary .md-nav__link:hover {
-  color: var(--md-default-fg-color);
+  color: var(--sl-strong);
 }
 
 .md-nav--secondary .md-nav__link--active {
-  color: var(--md-accent-fg-color);
-  border-left-color: var(--md-accent-fg-color);
+  color: var(--sl-strong);
+  background-color: var(--sl-pill);
+}
+
+.md-nav--secondary .md-nav__link--active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  width: 3px;
+  border-radius: 3px;
+  background-color: var(--md-accent-fg-color);
 }
 
 .md-nav--secondary .md-nav .md-nav__link {
-  padding-left: 1.4rem;
+  padding-left: 1.3rem;
 }
 
 /* ═══════════════════════════════════════════════
@@ -388,9 +631,9 @@
 .md-typeset .admonition,
 .md-typeset details {
   --sl-c: #6c8ebf;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   border: 1px solid color-mix(in srgb, var(--sl-c) 30%, transparent);
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: color-mix(in srgb, var(--sl-c) 7%, transparent);
   box-shadow: none;
   padding: 0 0.9rem;
@@ -402,8 +645,8 @@
   border: none;
   margin: 0 -0.9rem;
   padding: 0.65rem 0.9rem 0.1rem 2.5rem;
-  font-weight: 600;
-  color: var(--md-default-fg-color);
+  font-weight: 650;
+  color: var(--sl-strong);
 }
 
 .md-typeset .admonition > .admonition-title::before,
@@ -454,20 +697,20 @@
 .md-typeset .admonition.quote, .md-typeset details.quote,
 .md-typeset .admonition.cite, .md-typeset details.cite { --sl-c: #8b97a5; }
 
-/* ─── Таблицы — тонкие границы, мягкая шапка ─── */
+/* ─── Таблицы ─── */
 .md-typeset table:not([class]) {
   border: 1px solid var(--sl-border);
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   background-color: transparent;
   box-shadow: none;
 }
 
 .md-typeset table:not([class]) th {
-  font-weight: 600;
+  font-weight: 650;
   background-color: var(--sl-surface);
-  color: var(--md-default-fg-color);
+  color: var(--sl-strong);
   border-bottom: 1px solid var(--sl-border);
 }
 
@@ -480,13 +723,13 @@
 }
 
 .md-typeset table:not([class]) tbody tr:hover {
-  background-color: var(--md-accent-fg-color--transparent);
+  background-color: var(--sl-pill-hover);
   box-shadow: none;
 }
 
 /* ─── Код ─── */
 .md-typeset code {
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 0.85em;
 }
 
@@ -496,18 +739,17 @@
 }
 
 .md-typeset pre > code {
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: inset 0 0 0 1px var(--sl-border);
 }
 
 /* ─── Кнопки ─── */
 .md-typeset .md-button {
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 /* ═══════════════════════════════════════════════
    Карточки «Назад / Далее» внизу страницы
-   (вместо стандартного футера Material)
    ═══════════════════════════════════════════════ */
 .md-footer {
   display: none;
@@ -526,16 +768,16 @@
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
-  padding: 0.8rem 1rem;
+  padding: 0.85rem 1rem;
   border: 1px solid var(--sl-border);
-  border-radius: 10px;
+  border-radius: 12px;
   color: var(--md-default-fg-color);
   transition: border-color 0.2s, background-color 0.2s;
 }
 
 .md-typeset .sl-pager__link:hover {
-  border-color: var(--md-accent-fg-color);
-  background-color: var(--md-accent-fg-color--transparent);
+  border-color: var(--sl-muted);
+  background-color: var(--sl-pill-hover);
 }
 
 .sl-pager__link--next {
@@ -550,12 +792,9 @@
 
 .sl-pager__title {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 650;
   line-height: 1.4;
-}
-
-.sl-pager__link:hover .sl-pager__title {
-  color: var(--md-accent-fg-color);
+  color: var(--sl-strong);
 }
 
 @media (max-width: 600px) {
@@ -573,12 +812,12 @@
   background-color: var(--sl-surface);
   color: var(--md-default-fg-color--light);
   box-shadow: 0 0 0 1px var(--sl-border);
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .md-top:hover {
-  background-color: var(--md-accent-fg-color);
-  color: var(--md-default-bg-color);
+  background-color: var(--sl-pill);
+  color: var(--sl-strong);
 }
 
 /* ═══════════════════════════════════════════════
