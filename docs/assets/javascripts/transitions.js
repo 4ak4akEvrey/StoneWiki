@@ -137,6 +137,27 @@ document.addEventListener("keydown", function (e) {
   setTimeout(function () { input.focus(); }, 0);
 });
 
+// ── Вкладки в шапке ──
+// При мгновенной навигации шапка не перерисовывается, а скрытая полоса .md-tabs —
+// да. Берём из неё активную вкладку и правильные ссылки для текущей страницы.
+function syncTabs() {
+  var src = document.querySelectorAll(".md-tabs .md-tabs__item");
+  var dst = document.querySelectorAll(".sl-tabs .md-tabs__item");
+  for (var i = 0; i < src.length && i < dst.length; i++) {
+    dst[i].classList.toggle("md-tabs__item--active", src[i].classList.contains("md-tabs__item--active"));
+    var a = src[i].querySelector("a"), b = dst[i].querySelector("a");
+    if (a && b) {
+      b.setAttribute("href", a.getAttribute("href"));
+    }
+  }
+}
+
+if (typeof document$ !== "undefined") {
+  document$.subscribe(syncTabs);
+} else {
+  document.addEventListener("DOMContentLoaded", syncTabs);
+}
+
 // ── Кнопка «Копировать ссылку» и всплывашка ──
 document.addEventListener("click", function (e) {
   var btn = e.target.closest && e.target.closest("[data-sl-copy]");
