@@ -14,6 +14,22 @@
       {% block content %}
         {% include "partials/content.html" %}
       {% endblock %}
+      {% if page.previous_page or page.next_page %}
+        <nav class="sl-pager" aria-label="Навигация по страницам">
+          {% if page.previous_page %}
+            <a class="sl-pager__link sl-pager__link--prev" href="{{ page.previous_page.url | url }}">
+              <span class="sl-pager__label">← Назад</span>
+              <span class="sl-pager__title">{{ page.previous_page.title | striptags }}</span>
+            </a>
+          {% endif %}
+          {% if page.next_page %}
+            <a class="sl-pager__link sl-pager__link--next" href="{{ page.next_page.url | url }}">
+              <span class="sl-pager__label">Далее →</span>
+              <span class="sl-pager__title">{{ page.next_page.title | striptags }}</span>
+            </a>
+          {% endif %}
+        </nav>
+      {% endif %}
     </article>
   </div>
 {% endblock %}
