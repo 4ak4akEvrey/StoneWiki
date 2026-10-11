@@ -118,3 +118,21 @@
 
   observer.observe(document.body, { childList: true, subtree: true });
 })();
+
+// ── Ctrl+K / Cmd+K открывает поиск, как в GitBook ──
+document.addEventListener("keydown", function (e) {
+  if (!(e.ctrlKey || e.metaKey) || e.key.toLowerCase() !== "k" && e.code !== "KeyK") {
+    return;
+  }
+  var toggle = document.querySelector('[data-md-toggle="search"]');
+  var input = document.querySelector(".md-search__input");
+  if (!toggle || !input) {
+    return;
+  }
+  e.preventDefault();
+  if (!toggle.checked) {
+    toggle.checked = true;
+    toggle.dispatchEvent(new Event("change"));
+  }
+  setTimeout(function () { input.focus(); }, 0);
+});
