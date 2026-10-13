@@ -124,7 +124,7 @@ hooks:
   - hooks/stoneland.py
 
 extra_css:
-  - assets/stylesheets/extra.css?v=5
+  - assets/stylesheets/extra.css?v=6
 
 extra_javascript:
-  - assets/javascripts/transitions.js?v=5
+  - assets/javascripts/transitions.js?v=6
