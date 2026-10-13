@@ -572,8 +572,13 @@
     padding-left: 0.3rem;
   }
 
+  /* Открыта главная страница группы — та же серая капсула, что у активной страницы */
+  .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested > .md-nav__container:has(> .md-nav__link--active) {
+    background-color: var(--sl-pill);
+  }
+
   .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested > .md-nav__container > .md-nav__link--active {
-    color: var(--md-accent-fg-color);
+    color: var(--sl-strong);
   }
 
   .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item--nested > .md-nav__link .md-nav__icon {
