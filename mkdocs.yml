@@ -66,41 +66,11 @@ nav:
       - 📜 Договоры: main/town/contracts.md
   - Лор:
     - 🧭 Новому игроку: lore/novomu-igroku.md
-    - 🌍 Мир:
-      - 🌍 О нашем мире: lore/mir/index.md
-      - 📅 Летоисчисление: lore/mir/letoischislenie.md
-    - 🛡️ Силы Рерума:
-      - 🛡️ Обзор: lore/frakcii/index.md
-      - 👑 Аврелийская империя: lore/frakcii/imperiya.md
-      - 🏯 Восточные кланы: lore/frakcii/vostochnye-klany.md
-      - 🐉 Монстры: lore/frakcii/monstry.md
-      - 🗡️ Орден Праведного Века: lore/frakcii/orden.md
-    - 🧬 Расы Морнхейма:
-      - 🧬 Обзор: lore/rasy/index.md
-      - 🧑 Люди: lore/rasy/lyudi.md
-      - ⛏️ Гномы: lore/rasy/gnomy.md
-      - 🔥 Тифлинги: lore/rasy/tiflingi.md
-      - 🐸 Монгреллы: lore/rasy/mongrelly.md
-      - 🌿 Эльфы: lore/rasy/elfy.md
-    - 📜 История Рерума:
-      - 📜 Обзор: lore/istoriya/index.md
-      - 🏕️ Древние времена: lore/istoriya/drevnie-vremena.md
-      - 👑 Король монстров: lore/istoriya/korol-monstrov.md
-      - 💍 Невеста Короля: lore/istoriya/nevesta-korolya.md
-      - 🔥 Пламя Востока: lore/istoriya/plamya-vostoka.md
-      - ⚓ Покорение Рерума: lore/istoriya/pokorenie.md
-    - 📖 Праведный Завет:
-      - 📖 О Завете: lore/zavet/index.md
-      - 📜 I. О временах прежде Завета: lore/zavet/kniga-01.md
-      - 📜 II. О призвании Аврелия: lore/zavet/kniga-02.md
-      - 📜 III. О мятеже и взятии Аксиса: lore/zavet/kniga-03.md
-      - 📜 IV. О пещерах и предательстве: lore/zavet/kniga-04.md
-      - 📜 V. О Проклятии: lore/zavet/kniga-05.md
-      - 📜 VI. О Воскрешении: lore/zavet/kniga-06.md
-      - 📜 VII. О Благодати: lore/zavet/kniga-07.md
-      - 📜 VIII. О Дарах Крови: lore/zavet/kniga-08.md
-      - 📜 IX. О Священной войне: lore/zavet/kniga-09.md
-      - 📜 X. О наследнике и наречении Империи: lore/zavet/kniga-10.md
+    - 🌍 Мир: lore/mir.md
+    - 🛡️ Силы Рерума: lore/sily.md
+    - 🧬 Расы Морнхейма: lore/rasy.md
+    - 📜 История Рерума: lore/istoriya.md
+    - 📖 Праведный Завет: lore/zavet.md
 
 markdown_extensions:
   - meta
