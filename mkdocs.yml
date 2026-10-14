@@ -46,6 +46,7 @@ nav:
     - 🧭 Основное:
       - 🏠 Главная: index.md
       - 🌱 Первые шаги: start/start.md
+      - 🎯 Навыки: main/skills.md
       - 🎭 Ролевая игра: main/roleplay.md
       - 🌡️ Температура: main/temperature.md
       - 🎵 Музыка: main/music.md
@@ -64,6 +65,10 @@ nav:
       - 💰 Экономика: main/town/innovations.md
       - 🗺️ Наделы: main/town/advisors.md
       - 📜 Договоры: main/town/contracts.md
+    - 🌾 Земледелие:
+      - 📋 Обзор: main/farming/index.md
+      - 🚿 Лейки: main/farming/cans.md
+      - ❓ Вопросы и советы: main/farming/faq.md
   - Лор:
     - 🧭 Новому игроку: lore/novomu-igroku.md
     - 🌍 Мир: lore/mir.md
